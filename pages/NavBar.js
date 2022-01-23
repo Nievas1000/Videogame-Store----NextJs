@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Cart from './components/Cart'
 
 const NavBar = ({titulo}) =>{
     return(
@@ -15,6 +16,7 @@ const NavBar = ({titulo}) =>{
                         <li className='nav-link'><Link href="/AllGames">All games</Link></li>
                     </ul>
                 </nav>
+                <Cart />
             </div>
         </div>  
     )

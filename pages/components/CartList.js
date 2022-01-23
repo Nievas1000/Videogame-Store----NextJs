@@ -4,7 +4,6 @@ import Image from "next/image";
 const CartList = ({...props}) =>{
         const carro = props.carro;
         const cantidad = props.cantidad
-        console.log("lista carro")
         return(
             <div className="detalles">
                 <ul>

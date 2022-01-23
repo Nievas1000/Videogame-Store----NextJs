@@ -12,7 +12,7 @@ const Cart = () =>{
                 <BubbleAlert value={cantidad}/>
             </span>
             <button onClick={mostrarCarro} className='carro'>
-                    <ShoppingCartIcon />
+                    <ShoppingCartIcon className='icon-shop'/>
             </button>
                 {carroVisible ? <CartList cantidad={cantidad} carro={carro}/> : null}
         </div>

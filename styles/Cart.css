@@ -5,9 +5,10 @@
     position: absolute;
     z-index: 2;
     right: 0;
+    margin-top: -66px;
 }
 .carro{
-    background-color: #182d49;
+    background-color: transparent;
     color: beige;
     border: none;
     padding:15px;
@@ -16,8 +17,8 @@
 }
 .bubble{
     position: relative;
-    left: 20px;
-    top: 40px;
+    left: 30px;
+    top: 30px;
 }
 
 /* LISTA CARRO */
@@ -70,74 +71,13 @@
 @media only screen and (min-width: 575px){
     .container_carro{
         margin-right: 20px;
+        margin-top: 28px;
+    }
+    .bubble{
+        left: 28px;
+        top: 35px;
+    }
+    .icon-shop{
+        font-size: 35px;
     }
 }
-/*
-.container_carro{
-    display: flex;
-    justify-content: right;
-    margin-right: 20px;
-    position: fixed;
-    z-index: 2;
-    right: 0;
-}
-.carro{
-    background-color: #182d49;
-    color: beige;
-    border: none;
-    padding:15px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.bubble{
-    position: relative;
-    left: 20px;
-    top: 40px;
-}
-
-
-
-.detalles{
-    background-color: #14283f;
-    position: absolute;
-    margin-top: 40px;
-    box-shadow: 1px 5px 5px rgb(0,0,0,0.3);
-    border-radius: 8px;
-    width: 350px;
-    right: 50px;
-}
-.detalles ul{
-    margin:0px;
-    padding:0px;
-    list-style: none;
-}
-.detalles ul li{
-    margin: 10px;
-    font-size: 13px;
-}
-.cantidad-prod{
-    font-size: 20px;
-    margin-left: 10px;
-}
-.producto{
-    list-style: none;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 20px;
-    border-bottom: solid 1px #aaa;
-}
-.img-lista{
-    width: 150px;
-    height: 100px;
-}
-
-
-
-.bubbleAlert{
-    border-radius: 15px;
-    color:white;
-    padding: 2px 10px;
-    font-size: 1.5rem;
-    width: 20px;
-}*/

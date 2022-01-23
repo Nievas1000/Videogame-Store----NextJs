@@ -14,13 +14,12 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>
         <title>KingGames</title>
-        <link rel="icon" href="/KG_icon.ico" style={{fontSize:20}}/>
+        <link rel="icon" href="/KG_icon.ico"/>
       </Head>
       <CartProvider>
         <header>
           <NavBar titulo="KingGames"/>
         </header>
-          <Cart/>
           <Component {...pageProps} />
       </CartProvider>
     </div>)

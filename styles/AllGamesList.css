@@ -1,0 +1,114 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.title-allgames{
+    margin-top: 130px;
+    font-size: 22px;
+}
+.form-cat{
+    display: flex;
+    margin-left: 19%;
+}
+.form-cat select{
+    background-color: #1c3a66;
+    color: rgb(177, 177, 177);
+    border: none;
+    font-size: 15px;
+}
+.form-cat button{
+    height: 30px;
+    font-size: 15px;
+    background-color: #1c3a66;
+    color: rgb(177, 177, 177);
+}
+.tajetas{
+    column-count: 1;
+    max-width: 1200px;
+}
+article{
+    display: inline-block;
+    background-color: #182d49;
+    border-radius: 4px;
+    margin: 15px;
+    height: auto;
+    transition: all 0.5s ease;
+}
+article p{
+    margin-left: 60px;
+}
+.img-inicio{
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+article:hover{
+    box-shadow: 1px 5px 5px rgb(0,0,0,0.7);
+}
+.title-card{
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px beige;
+}
+
+article button{
+    width: 100%;
+    height: 30px;
+    background-color: #1c3a66;
+    color: beige;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 1px black;
+}
+.card-description{
+    margin-left: 30px;
+}
+
+article button:hover{
+    box-shadow: 2px 3px 3px rgb(0, 0, 0, 0.5);
+    background-color: #122642;
+}
+
+/* PAGINATION */
+
+.paginationContainer{
+    display: flex;
+    margin-left: 13%;
+}
+.paginationContainer .page{
+    display:none
+}
+.paginationContainer .break{
+    display:none
+}
+.paginationContainer > *{
+    cursor: pointer;
+    background-color: #1c3a66;
+    color: beige;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin: 5px;
+    list-style: none;
+    width: 50px;
+}
+.paginationContainer > *:hover{
+    box-shadow: 2px 3px 3px rgb(0, 0, 0, 0.5);
+    background-color: #122642;
+}
+.paginationNext{
+    margin-left: 6px;
+}
+@media only screen and (min-width: 575px){
+    .title-allgames{
+        margin-left: 40%;
+    }
+    .form-cat{
+        margin-left: 43%;
+    }
+    .tajetas{
+        column-count: 3;
+    }
+    .paginationContainer{
+        margin-left: 42%;
+    }
+}

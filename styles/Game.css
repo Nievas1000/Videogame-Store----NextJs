@@ -1,0 +1,112 @@
+.container-prod{
+    display: block;
+    margin-top: 140px;
+}
+.zona-prod{
+    display: block;
+    width: 80%;
+}
+.zona-prod *{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.zona-1 img{
+    border-radius: 5px;
+}
+.zona-1 button{
+    margin-left: 16%;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2359A4;
+    color: white;
+    cursor: pointer;
+}
+.zona-2{
+    width: 100%;
+}
+.screenshots{
+    width: 200px;
+    height: 130px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.description{
+    border-bottom: solid 1px rgb(185, 185, 185);
+}
+.requirements{
+    border-bottom: solid 1px rgb(185, 185, 185);
+}
+
+/*COMENTARIOS*/
+
+
+.zona-coments p{
+    border-bottom: solid 1px rgb(185, 185, 185);
+    margin-bottom: 10px;
+}
+.comentarios form{
+    display: flex;
+}
+.input-coment{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+form button{
+    height: 50px;
+    width: 90px;
+    background-color: rgb(40, 41, 41);
+    color: beige;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-left: 5px;
+}
+
+form button:hover{
+    box-shadow: 3px 5px 5px rgb(0,0,0,0.3);
+}
+
+@media only screen and (min-width: 575px){
+    .container-prod{
+        display: flex;
+        margin-top: 120px;
+        justify-content: center;
+    }
+    .zona-prod{
+        display: flex;
+    }
+    .zona-1{
+        width: 30%;
+        margin-left: 10px;
+    }
+    .zona-1 button{
+        margin-left: 23px;
+        width: 80%;
+    }
+    .zona-2{
+        width: 60%;
+    }
+    .zona-screen{
+        display: flex;
+        border-bottom: solid 1px gray;
+        margin-bottom: 20px;
+    }
+    .input-coment{
+        width: 70%;
+    }
+    
+    form button{
+        height: 50px;
+        width: 70px;
+    }
+}

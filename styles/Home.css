@@ -1,0 +1,55 @@
+.titles{
+    margin-left: 8%;
+    margin-top: 130px;
+}
+h2{
+    margin-left: 25px;
+}
+.games{
+    display: block;
+}
+.gameRel{
+    display: flex;
+    padding: 20px 25px;
+    background-color: #182d49;
+    border-radius: 8px;
+    margin: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.gameRel:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0,0,7);
+    transform: translateY(-3%);
+}
+.gameRel div{
+    margin-left: 30px;
+}
+.popular div{
+    margin: 30px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.popular div img{
+    border-radius: 5px;
+}
+.popular div:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0,0,7);
+    transform: translateY(-3%);
+}
+.img-pop{
+    position: absolute;
+    z-index: 1;
+}
+@media only screen and (min-width: 575px){
+    .games{
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+        "relevant popular";
+    }
+    .titles{
+        margin-left: 35%;
+        margin-top: 140px;
+    }
+}

@@ -14,6 +14,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>
         <title>KingGames</title>
+        <link rel="icon" href="/KG_icon.ico" style={{fontSize:20}}/>
       </Head>
       <CartProvider>
         <header>

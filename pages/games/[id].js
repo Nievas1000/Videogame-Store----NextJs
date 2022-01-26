@@ -1,15 +1,19 @@
 import CommentArea from "../components/CommentArea"
 import Image from "next/image";
 import {useGame} from "../context/cart"
+import AuthContext from "../context/AuthContext"
+import { useContext } from "react"
 
 const Game = ({data}) =>{
     const {agregarAlCarro} = useGame()
+    const {isLogged} = useContext(AuthContext)
+
     return(
         <div className="container-prod">
             <div className="zona-prod">
                 <div className="zona-1">
                     <Image alt={data.title} className="img-prog" src={data.thumbnail} width={365} height={206} layout="fixed"/><br/>
-                    <button onClick={() => agregarAlCarro(data)}>Add to cart</button>
+                    {isLogged ? <button onClick={() => agregarAlCarro(data)}>Add to cart</button> : null}
                 </div>
                 <div className="zona-2">
                     <h1 className="title-prod">{data.title}</h1>

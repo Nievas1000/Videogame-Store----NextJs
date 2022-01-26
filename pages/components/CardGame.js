@@ -1,6 +1,8 @@
 import Link from "next/link"
 import {useGame} from "../context/cart"
 import Image from "next/image"
+import AuthContext from "../context/AuthContext"
+import { useContext } from "react"
 
 const CardGame = ({...props}) =>{
     const {agregarAlCarro} = useGame()
@@ -8,7 +10,7 @@ const CardGame = ({...props}) =>{
     const category = props.category
     const lastPageVisit = props.lastPageVisit
     const gamesPorPage = props.gamesPorPage
-
+    const {isLogged} = useContext(AuthContext)
 
     const prodByCat = games.map(x => x.genre === category.genre ?
       <article key={x.id}>
@@ -17,7 +19,7 @@ const CardGame = ({...props}) =>{
               </Link>
               <div className="title-card"><h3>{x.title}</h3></div>
               <p className="card-description">{x.short_description.substring(0,35)}</p>
-              <button onClick={() => agregarAlCarro(x)}>Add to cart</button>
+              {isLogged ? <button onClick={() => agregarAlCarro(x)}>Add to cart</button> : null}
       </article> : null)
 
     const allProd = games.slice(lastPageVisit, lastPageVisit + gamesPorPage).map(x =>
@@ -27,7 +29,7 @@ const CardGame = ({...props}) =>{
               </Link>
               <div className="title-card"><h3>{x.title}</h3></div>
               <p className="card-description">{x.short_description.substring(0,35)}...</p>
-              <button onClick={() => agregarAlCarro(x)}>Add to cart</button>
+              {isLogged ? <button onClick={() => agregarAlCarro(x)}>Add to cart</button> : null}
       </article>)
     
      if(category.genre === undefined || category.genre === ""){

@@ -2,7 +2,6 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function Home({gamesRelevance,gamesByDate}) {
-    
   return (
     <div>
       <div className="titles">
@@ -14,7 +13,7 @@ export default function Home({gamesRelevance,gamesByDate}) {
       <h2>Most played ever</h2>
         {gamesRelevance.map(x =>
           <div className="gameRel" key={x.id}>
-            <Image src={x.thumbnail} alt={x.title} width={250} height={200} priority layout="fixed"/>
+            <Image src={x.thumbnail} alt={x.title} width={250} height={170} priority layout="fixed"/>
             <Link  href={`/games/${x.id}`}>
             <div>
               <h3>{x.title}</h3>
@@ -45,6 +44,7 @@ export default function Home({gamesRelevance,gamesByDate}) {
           </div>
       </div>
     </div>
+    
   )
 }
 export const getStaticProps = async () =>{

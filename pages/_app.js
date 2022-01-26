@@ -4,10 +4,12 @@ import '../styles/Cart.css'
 import '../styles/AllGamesList.css'
 import '../styles/Game.css'
 import '../styles/Home.css'
-import NavBar from './NavBar'
+import '../styles/SingUp.css'
+import NavBar from './components/NavBar'
 import {CartProvider} from "./context/cart"
-import Cart from './components/Cart'
 import Head from 'next/head'
+import { ContextAuthProvider } from './context/AuthContext'
+
 
 function MyApp({ Component, pageProps }) {
   return(
@@ -16,12 +18,14 @@ function MyApp({ Component, pageProps }) {
         <title>KingGames</title>
         <link rel="icon" href="/KG_icon.ico"/>
       </Head>
-      <CartProvider>
-        <header>
-          <NavBar titulo="KingGames"/>
-        </header>
+      <ContextAuthProvider>
+        <CartProvider>
+          <header>
+            <NavBar titulo="KingGames"/>
+          </header>
           <Component {...pageProps} />
-      </CartProvider>
+        </CartProvider>
+      </ContextAuthProvider>
     </div>)
 }
 

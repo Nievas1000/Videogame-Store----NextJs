@@ -14,7 +14,7 @@
 nav ul{
     display: flex;
     list-style: none;
-    margin-left: 21%;
+    margin-left: 30%;
 }
 
 ul .nav-link{
@@ -32,6 +32,36 @@ ul .nav-link *{
 ul .nav-link *:hover{
     color: rgb(114, 113, 113);
 }
+.container-sessionout{
+    margin-top: -43px;
+    margin-left: 8%;
+}
+.container-sessionon{
+    margin-left: 16%;
+    margin-top: -43px;
+}
+.button-out , .button-on{
+    height: 30px;
+    width: 160px;
+    background-color: transparent;
+    color: rgb(177, 177, 177);
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    font-size: 15px;
+}
+.button-out:hover{
+    color: rgb(114, 113, 113);
+}
+.button-on a{
+    text-decoration: none;
+    color: rgb(177, 177, 177);
+    font-size: 15px;
+}
+.button-on a:hover{
+    color: rgb(114, 113, 113);
+}
 .logo a{
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -42,66 +72,48 @@ ul .nav-link *:hover{
     margin-top: 30px;
 }
 @media only screen and (min-width: 575px){
-.nav-container{
-    display: flex;
+    .nav-container{
+        display: flex;
+    }
+    .logos{
+        height: 110px;
+    }
+    nav{
+        margin-top: 5px;
+    }
+    nav ul{
+        margin-left: 0;
+    }
+    ul .nav-link{
+        font-size: 20px;
+    }
+    .logo a{
+        font-size: 50px;
+    }
+    .container-sessionout{
+        margin-left: 45%;
+        margin-top: 50px;
+    }
+    .container-sessionon{
+        margin-left: 43%;
+        margin-top: 50px;
+    }
+    .button-out , .button-on{
+        height: 30px;
+        width: 160px;
+        background-color: transparent;
+        color: beige;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 20px;
+        display: flex;
+        font-size: 20px;
+    }
+    .button-on{
+        margin-left: 70px;
+    }
+    .button-on a{
+        font-size: 20px;
+    }
 }
-.logos{
-    height: 110px;
-}
-nav{
-    margin-top: 5px;
-}
-nav ul{
-    margin-left: 0;
-}
-ul .nav-link{
-    font-size: 20px;
-}
-.logo a{
-    font-size: 50px;
-}
-}
-/*.nav-container{
-    display: flex;
-    width: 100%;
-    box-shadow: 1px 2px 5px rgb(0,0,0,0.3);
-    z-index: 2;
-    position: relative;
-    border-radius: 5px;
-    background-color: #182d49;
-}
-nav{
-    margin-top: 5px;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-}
-
-ul .nav-link{
-    margin: 8px;
-    margin-top: 26px;
-    font-size: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-ul .nav-link *{
-    text-decoration: none;
-    color: rgb(177, 177, 177);
-}
-
-ul .nav-link *:hover{
-    color: rgb(114, 113, 113);
-}
-.logo a{
-    text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(177, 177, 177);
-    font-size: 50px;
-}
-.logo{
-    margin-top: 30px;
-}
-.logo-img{
-    width: 200;
-}*/

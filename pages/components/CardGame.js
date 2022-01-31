@@ -1,5 +1,5 @@
 import Link from "next/link"
-import {useGame} from "../context/cart"
+import {useGame} from "../context/CartContext"
 import Image from "next/image"
 import AuthContext from "../context/AuthContext"
 import { useContext } from "react"

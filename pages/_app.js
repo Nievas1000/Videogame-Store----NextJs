@@ -7,7 +7,7 @@ import '../styles/Home.css'
 import '../styles/SignUp.css'
 import '../styles/Validation.css'
 import NavBar from './components/NavBar'
-import {CartProvider} from "./context/cart"
+import {CartProvider} from "./context/CartContext"
 import Head from 'next/head'
 import { ContextAuthProvider } from './context/AuthContext'
 

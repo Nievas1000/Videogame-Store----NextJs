@@ -74,40 +74,33 @@ ul .nav-link *:hover{
 @media only screen and (min-width: 575px){
     .nav-container{
         display: flex;
-    }
-    .logos{
-        height: 110px;
+        height: 70px;
     }
     nav{
         margin-top: 5px;
     }
+    .logos{
+        margin-top: -12px;
+    }
     nav ul{
         margin-left: 0;
+        margin-top: -5px;
     }
     ul .nav-link{
-        font-size: 20px;
+        font-size: 18px;
     }
     .logo a{
-        font-size: 50px;
+        font-size: 30px;
     }
     .container-sessionout{
-        margin-left: 45%;
-        margin-top: 50px;
+        margin-left: 52%;
+        margin-top: 27px;
     }
     .container-sessionon{
-        margin-left: 43%;
-        margin-top: 50px;
+        margin-left: 50%;
+        margin-top: 27px;
     }
     .button-out , .button-on{
-        height: 30px;
-        width: 160px;
-        background-color: transparent;
-        color: beige;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        font-size: 20px;
-        display: flex;
         font-size: 20px;
     }
     .button-on{

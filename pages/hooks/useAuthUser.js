@@ -4,20 +4,28 @@ import { auth } from "../../firebase";
 import { useRouter } from "next/router";
 import AuthContext from "../context/AuthContext"
 
-export const useAuthUser = async () => {
-  const { push, pathname } = useRouter();
+export const useAuthUser =  () => {
+  const router = useRouter();
 
   const { setisLogged } = useContext(AuthContext);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setisLogged(true);
-        if (pathname === "/SingIn" || pathname === "/SingUp") {
-          push("/");
+        try {
+          setisLogged(true);
+        } catch (error) {
+          console.log(error)
+        }
+        if (router.pathname === "/signin" || router.pathname === "/signup") {
+          router.push("/")
         }
       } else {
-        setisLogged(false);
+        try {
+          setisLogged(false);
+        } catch (error) {
+          console.log(error)
+        }
       }
     });
   }, []);

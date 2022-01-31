@@ -24,7 +24,14 @@ export const CartProvider = ({children}) =>{
         setVisibilidad(!carroVisible)
     }
 
+    const removeFromCart = (game) =>{
+        let indice = carro.indexOf(carro.find(x => x.id === game.id))
+        carro.splice(indice,1)
+        setCarro([...carro])
+        setCantidad(cantidad - 1)
+    }
+
     return(
-        <GameContext.Provider value={{carro, cantidad, carroVisible, agregarAlCarro, mostrarCarro}}>{children}</GameContext.Provider>
+        <GameContext.Provider value={{carro, cantidad, carroVisible, agregarAlCarro, mostrarCarro, removeFromCart}}>{children}</GameContext.Provider>
     )
 }

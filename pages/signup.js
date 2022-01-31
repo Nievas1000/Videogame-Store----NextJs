@@ -4,11 +4,12 @@ import useCredentials from './hooks/useCredentials'
 import useMessage from './hooks/useMessage';
 import {auth} from '../firebase'
 import { useRouter } from 'next/router';
-import GoogleIcon from '@mui/icons-material/Google';
-import { createUserWithEmailAndPassword, setPersistence, browserSessionPersistence, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, setPersistence, browserSessionPersistence} from "firebase/auth";
 import Validation from "./components/Validation"
+import {useAuthUser} from "./hooks/useAuthUser"
 
 const SignUp = () =>{
+    useAuthUser()
     const [credentials, changeUser] = useCredentials()
     const [message, showNotification, showErrors] = useMessage()
 
@@ -16,24 +17,11 @@ const SignUp = () =>{
 
     const registrerUser = async () =>{
       try {
-        await setPersistence(auth, browserSessionPersistence)
+        setPersistence(auth, browserSessionPersistence)
         await createUserWithEmailAndPassword(auth, credentials.email, credentials.password)
         push("/")
       } catch ({message}) {
         showErrors(message)
-      }
-    }
-
-    const RegistrerWithGoogle = async () =>{
-      const provider = new GoogleAuthProvider();
-      try {
-        await setPersistence(auth, browserSessionPersistence)
-        let result = await signInWithPopup(auth, provider);
-        const credential = GoogleAuthProvider.credentialFromResult(result)
-        const user = result.user
-        push("/")
-      } catch (error) {
-        console.log(error)
       }
     }
 
@@ -50,7 +38,6 @@ const SignUp = () =>{
             <input name='password' type="password" placeholder="Password" onChange={changeUser}/><br/>
             <input type="checkbox" className='checkbox' label=""/><label className='label-email'>"I want to receive inspiration, marketing promotions and updates via email."</label><br/>
             <button value="Login" className="login-button" onClick={registrerUser}> Sing Up </button><br/>
-            <button className="login-button" onClick={RegistrerWithGoogle}>Sing up with Google &nbsp; <GoogleIcon className='google-icon'/></button><br/>
             <Link href='/signin' className="sign-up">Already have an account? Sign In</Link><br/>
         </div>
         </div>

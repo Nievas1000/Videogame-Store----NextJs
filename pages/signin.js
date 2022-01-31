@@ -3,21 +3,35 @@ import Link from 'next/link';
 import useCredentials from './hooks/useCredentials'
 import useMessage from './hooks/useMessage';
 import {auth} from '../firebase'
-import { setPersistence, signInWithEmailAndPassword, browserSessionPersistence } from 'firebase/auth';
+import { setPersistence, signInWithEmailAndPassword, browserSessionPersistence, GoogleAuthProvider, signInWithPopup  } from 'firebase/auth';
 import Validation from "./components/Validation"
+import GoogleIcon from '@mui/icons-material/Google';
+import { useAuthUser } from './hooks/useAuthUser';
 
 const SignIn = () =>{
+  useAuthUser()
   const [credentials, changeUser] = useCredentials()
   const [message, showNotification, showErrors] = useMessage()
 
   const loginUser = async () =>{
     try {
-      await setPersistence(auth, browserSessionPersistence)
+      setPersistence(auth, browserSessionPersistence)
       await signInWithEmailAndPassword(auth, credentials.email, credentials.password)
       window.history.back()
     } catch ({message}) {
       showErrors(message)
-      console.log(message)
+    }
+  }
+
+  const RegistrerWithGoogle = async () =>{
+    const provider = new GoogleAuthProvider();
+    try {
+      setPersistence(auth, browserSessionPersistence)
+      let result = await signInWithPopup(auth, provider);
+      GoogleAuthProvider.credentialFromResult(result)
+      window.history.back()
+    } catch (error) {
+      console.log(error)
     }
   }
   return(
@@ -32,6 +46,7 @@ const SignIn = () =>{
           <input name='email' className='input-datos' type="text" placeholder="Email" onChange={changeUser} /><br/>
           <input name='password' className='input-datos' type="password" placeholder="Password" onChange={changeUser} required/><br/>
           <button value="Login" className="login-button" onClick={loginUser}> Sing in </button><br/>
+          <button className="login-button" onClick={RegistrerWithGoogle}>Sing in with Google &nbsp; <GoogleIcon className='google-icon'/></button><br/>
           <Link href='/signup' className="sign-up">Don't have an account? Sign Up</Link><br/>
       </div>
       </div>

@@ -12,7 +12,7 @@ export default function Games({games}) {
   const generos = generosPrev.filter((el,i) =>{
       return generosPrev.indexOf(el) === i
   })
-
+  
   const gamesPorPage = 12
   const lastPageVisit = page * gamesPorPage
 
@@ -27,7 +27,9 @@ export default function Games({games}) {
   }
   return (
     <div>
-        <h1 data-testid="titulo" className="title-allgames">All games have a value of 1000$</h1>
+        <div className="title-allgames">
+            <h1 data-testid="titulo">All games have a value of 1000$</h1>
+        </div>
         <div>
             <Formik initialValues={{genre:""}} onSubmit={SearchCat}>
                     <Form className="form-cat">

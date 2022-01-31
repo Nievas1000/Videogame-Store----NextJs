@@ -29,8 +29,9 @@
     margin-top: 40px;
     box-shadow: 1px 5px 5px rgb(0,0,0,0.3);
     border-radius: 8px;
-    width: 320px;
+    width: 500px;
     right: 30px;
+    height: auto;
 }
 .detalles ul{
     margin:0px;
@@ -39,7 +40,7 @@
 }
 .detalles ul li{
     margin: 10px;
-    font-size: 13px;
+    font-size: 20px;
 }
 .cantidad-prod{
     font-size: 20px;
@@ -57,6 +58,17 @@
     width: 150px;
     height: 100px;
 }
+.button-delete{
+    height: 30px;
+    background-color: rgb(148, 19, 19);
+    color: beige;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 1px black;
+}
+.button-delete:hover{
+    background-color: rgb(105, 14, 14);
+}
 
 /* BUBBLE ALERT */
 
@@ -71,7 +83,7 @@
 @media only screen and (min-width: 575px){
     .container_carro{
         margin-right: 20px;
-        margin-top: 28px;
+        margin-top: 3px;
     }
     .bubble{
         left: 28px;

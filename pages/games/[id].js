@@ -1,6 +1,6 @@
 import CommentArea from "../components/CommentArea"
 import Image from "next/image";
-import {useGame} from "../context/cart"
+import {useGame} from "../context/CartContext"
 import AuthContext from "../context/AuthContext"
 import { useContext } from "react"
 

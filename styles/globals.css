@@ -4,7 +4,7 @@ body{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 header{
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;

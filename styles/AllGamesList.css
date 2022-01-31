@@ -4,7 +4,8 @@
 }
 .title-allgames{
     margin-top: 130px;
-    font-size: 22px;
+    font-size: 11px;
+    margin-left: 15px;
 }
 .form-cat{
     display: flex;
@@ -100,7 +101,8 @@ article button:hover{
 }
 @media only screen and (min-width: 575px){
     .title-allgames{
-        margin-left: 40%;
+        margin-left: 37%;
+        margin-top: 100px;
     }
     .form-cat{
         margin-left: 43%;

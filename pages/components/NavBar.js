@@ -13,9 +13,9 @@ const NavBar = ({titulo}) =>{
     useAuthUser()
     const {isLogged} = useContext(AuthContext)
 
-    const cerrarSesion = async () =>{
+    const cerrarSesion = () =>{
         try {
-          await signOut(auth)
+          signOut(auth)
         } catch (error) {
           console.log(error)
         }

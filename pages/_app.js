@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     <div>
       <Head>
         <title>KingGames</title>
-        <link rel="icon" href="/KG_icon.ico"/>
+        <link rel="icon" href="static/KG_icon.ico"/>
       </Head>
       <ContextAuthProvider>
         <CartProvider>

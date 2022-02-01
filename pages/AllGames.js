@@ -1,8 +1,8 @@
 import ReactPaginate from "react-paginate"
 import { useState } from "react"
 import {Formik, Form} from 'formik'
-import Select from "./components/Select"
-import CardGame from "./components/CardGame"
+import Select from "../components/Select"
+import CardGame from "../components/CardGame"
 
 export default function Games({games}) {
   const [page, setPage] = useState(0)

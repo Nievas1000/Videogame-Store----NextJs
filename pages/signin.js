@@ -1,12 +1,12 @@
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link';
-import useCredentials from './hooks/useCredentials'
-import useMessage from './hooks/useMessage';
+import useCredentials from '../hooks/useCredentials'
+import useMessage from '../hooks/useMessage';
 import {auth} from '../firebase'
 import { setPersistence, signInWithEmailAndPassword, browserSessionPersistence, GoogleAuthProvider, signInWithPopup  } from 'firebase/auth';
-import Validation from "./components/Validation"
+import Validation from "../components/Validation"
 import GoogleIcon from '@mui/icons-material/Google';
-import { useAuthUser } from './hooks/useAuthUser';
+import { useAuthUser } from '../hooks/useAuthUser';
 
 const SignIn = () =>{
   useAuthUser()

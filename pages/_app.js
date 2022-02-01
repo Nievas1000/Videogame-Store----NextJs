@@ -6,10 +6,10 @@ import '../styles/Game.css'
 import '../styles/Home.css'
 import '../styles/SignUp.css'
 import '../styles/Validation.css'
-import NavBar from './components/NavBar'
-import {CartProvider} from "./context/CartContext"
+import NavBar from '../components/NavBar'
+import {CartProvider} from "../context/CartContext"
 import Head from 'next/head'
-import { ContextAuthProvider } from './context/AuthContext'
+import { ContextAuthProvider } from '../context/AuthContext'
 
 
 function MyApp({ Component, pageProps }) {

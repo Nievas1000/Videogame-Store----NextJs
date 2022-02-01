@@ -5,7 +5,7 @@ import AuthContext from "../context/AuthContext"
 import { useContext } from "react"
 import { useAuthUser } from "../hooks/useAuthUser"
 import { signOut } from 'firebase/auth';
-import {auth} from '../../firebase'
+import {auth} from '../firebase'
 import LogoutIcon from '@mui/icons-material/Logout';
 import LoginIcon from '@mui/icons-material/Login';
 

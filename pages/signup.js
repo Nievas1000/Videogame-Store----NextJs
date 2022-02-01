@@ -1,12 +1,12 @@
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link';
-import useCredentials from './hooks/useCredentials'
-import useMessage from './hooks/useMessage';
+import useCredentials from '../hooks/useCredentials'
+import useMessage from '../hooks/useMessage';
 import {auth} from '../firebase'
 import { useRouter } from 'next/router';
 import { createUserWithEmailAndPassword, setPersistence, browserSessionPersistence} from "firebase/auth";
-import Validation from "./components/Validation"
-import {useAuthUser} from "./hooks/useAuthUser"
+import Validation from "../components/Validation"
+import {useAuthUser} from "../hooks/useAuthUser"
 
 const SignUp = () =>{
     useAuthUser()

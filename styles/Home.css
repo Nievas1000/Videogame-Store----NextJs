@@ -9,7 +9,7 @@ h2{
     display: block;
 }
 .gameRel{
-    display: flex;
+    display: block;
     padding: 20px 25px;
     background-color: #182d49;
     border-radius: 8px;
@@ -20,9 +20,6 @@ h2{
 .gameRel:hover{
     box-shadow: 5px 5px 20px rgb(0, 0, 0,0,7);
     transform: translateY(-3%);
-}
-.gameRel div{
-    margin-left: 30px;
 }
 .popular div{
     margin: 30px;
@@ -51,5 +48,11 @@ h2{
     .titles{
         margin-left: 35%;
         margin-top: 100px;
+    }
+    .gameRel{
+        display: flex;
+    }
+    .gameRel div{
+        margin-left: 30px;
     }
 }

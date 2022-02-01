@@ -35,8 +35,9 @@ export default function Home({gamesRelevance,gamesByDate}) {
                 src={x.thumbnail}
                 alt={x.title}
                 layout="fixed"
-                width={250} 
-                height={200}/>
+                width={290} 
+                height={200}
+                priority/>
               </a>
               </Link>
             </div>

@@ -4,7 +4,7 @@ import {Formik, Form} from 'formik'
 import Select from "../components/Select"
 import CardGame from "../components/CardGame"
 
-export default function Games({games}) {
+const Games = ({games}) => {
   const [page, setPage] = useState(0)
   const [category, setCategory] = useState({})
   const generosPrev = []
@@ -78,3 +78,5 @@ export const getStaticProps = async () =>{
         props: {games}
     }
 }
+
+export default Games

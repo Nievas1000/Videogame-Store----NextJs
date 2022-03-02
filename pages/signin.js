@@ -47,7 +47,7 @@ const SignIn = () =>{
           <input name='password' className='input-datos' type="password" placeholder="Password" onChange={changeUser} required/><br/>
           <button value="Login" className="login-button" onClick={loginUser}> Sing in </button><br/>
           <button className="login-button" onClick={RegistrerWithGoogle}>Sing in with Google &nbsp; <GoogleIcon className='google-icon'/></button><br/>
-          <Link href='/signup' className="sign-up">Don't have an account? Sign Up</Link><br/>
+          <Link href='/signup' className="sign-up">Dont have an account? Sign Up</Link><br/>
       </div>
       </div>
     </div>  

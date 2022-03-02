@@ -36,7 +36,7 @@ const SignUp = () =>{
         <div className="login-form">
             <input name='email' type="text" placeholder="Email" onChange={changeUser}/><br/>
             <input name='password' type="password" placeholder="Password" onChange={changeUser}/><br/>
-            <input type="checkbox" className='checkbox' label=""/><label className='label-email'>"I want to receive inspiration, marketing promotions and updates via email."</label><br/>
+            <input type="checkbox" className='checkbox' label=""/><label className='label-email'>I want to receive inspiration, marketing promotions and updates via email.</label><br/>
             <button value="Login" className="login-button" onClick={registrerUser}> Sing Up </button><br/>
             <Link href='/signin' className="sign-up">Already have an account? Sign In</Link><br/>
         </div>

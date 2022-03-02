@@ -65,7 +65,7 @@ article button{
 }
 
 article button:hover{
-    box-shadow: 2px 3px 3px rgb(0, 0, 0, 0.5);
+    box-shadow: 2px 3px 3px rgb(0, 0, 0, 0.2);
     background-color: #122642;
 }
 
